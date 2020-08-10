@@ -25,6 +25,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -40,4 +41,19 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    window.kakaoAsyncInit = function() {
+      Kakao.Channel.createChatButton({
+        container: '#kakao-talk-channel-chat-button',
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://developers.kakao.com/sdk/js/kakao.plusfriend.min.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, 'script', 'kakao-js-sdk');
+  </script>
 </html>
