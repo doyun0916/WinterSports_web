@@ -5,87 +5,225 @@ import Carousel from 'react-bootstrap/Carousel';
 import main1 from '../img/main1.jpg';
 import main2 from '../img/main2.jpg';
 import main3 from '../img/main3.jpg';
-import {media} from "../lib/styleUtils";
 import oc from 'open-color';
+import '../index.css';
 
 const SlideContainer = styled.div`
     margin-left: 40px;
-    margin-top: -380px;
     width: 75%;
-    height: 600px;
+    height: 756px;
     z-index: -1 !important;
-    box-shadow: 2px 2px 2px grey;
-    border-radius: 10%;
-`;
-
-const Main1 = styled.div`
-     flex-direction: row;
-`;
-
-const Main2 = styled.div`
-     flex-direction: row;
+    box-shadow: 4px 4px 4px red;
+    border-radius: 0px 0px 50px 50px;
+    
 `;
 
 const Title = styled.div`
+    margin-top: 250px;
+    margin-left: -400px;
      position: relative;
-     margin-top: 250px;
-     margin-left: 800px;
      font-weight: normal;
      font-size: 3rem;
      z-index: 1 !important;
      color: white;
      font-family: Fair Prosper;
-     Text-shadow: 3px 3px 3px grey;
+     Text-shadow: 3px 3px 3px black;
+`;
+
+const Main1 = styled.div`
+     margin-top: 30px;
+     display: flex;
+     flex-direction: row;
+`;
+
+const Main2 = styled.div`
+    margin-top: 400px;
+    width: 1400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background: transparent;
+`;
+
+const Main3 = styled.div`
+    margin-top: 200px;
+    width: 1400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background: transparent;
+`;
+
+const Morebox1 = styled.div`
+    position: absolute;
+    left: 0;
+    width: 47%;
+    height: 280px;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 4px 4px 4px gray;
+    background: linear-gradient(to right, ${oc.grape[2]}, ${oc.violet[6]});
+`;
+
+const Morebox2 = styled.div`
+    position: absolute;
+    display: flex;
+    right: 0;
+    width: 47%;
+    height: 280px;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 4px 4px 4px gray;
+    background: linear-gradient(to right, ${oc.blue[6]}, ${oc.cyan[3]});
+`;
+
+const Morebox3 = styled.div`
+    position: absolute;
+    left: 0;
+    width: 47%;
+    height: 280px;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 4px 4px 4px gray;
+    background: linear-gradient(to right, ${oc.indigo[2]}, ${oc.blue[7]});
+`;
+
+const Morebox4 = styled.div`
+    position: absolute;
+    display: flex;
+    right: 0;
+    width: 47%;
+    height: 280px;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 4px 4px 4px gray;
+    background: linear-gradient(to right, ${oc.violet[5]}, ${oc.indigo[3]});
+`;
+
+const SemiTitle = styled.div`
+     font-weight: normal;
+     font-size: 3rem;
+     z-index: 1 !important;
+     color: white;
+     font-family: Fair Prosper;
+     Text-shadow: 3px 3px 3px black;   
+`;
+
+const Context = styled.div`
+     font-weight: normal;
+     color: white;
+     font-size: 1.2rem;
+     Text-shadow: 2px 2px 2px black;
+`;
+
+const LearnMore = styled.div`
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-family: "Arial Rounded MT Bold";
+    margin-left: 50px;
+    margin-top: 25px;
+    width: 140px;
+    height: 40px;
+    padding-top:8px;
+    font-size:0.85rem;
+    border: solid 1px white;
+    background-color: black;
+    border-radius: 5%;
 `;
 
 const Main = () => {
     return (
-        <div>
+        <div style={{display: "flex", flexDirection: "column"}}>
             <Header />
             <Main1>
-                <Title>Learn and become the best <br /> We are here for the support</Title>
                 <SlideContainer>
                     <Carousel>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
                                 src={main1}
-                                style={{borderRadius: "10%", boxShadow: "5px 5px 5px grey"}}
+                                style={{borderRadius: "0px 0px 50px 50px", boxShadow: "5px 5px 5px red"}}
                                 alt="First slide"
                             />
                             <Carousel.Caption>
-                                <h3 style={{fontWeight: "bold", color: "white", textShadow: "1px 1px 1px grey"}}>스키의 원리에 대해 이해하면 <br /> 스키가 쉬워집니다.</h3>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                <h3 style={{fontWeight: "bold", color: "white", textShadow: "1px 1px 1px black", marginRight:"300px", paddingBottom: "100px"}}>원리를 설명하여 이해도를 높이고</h3>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
                                 src={main2}
-                                style={{borderRadius: "10%", boxShadow: "5px 5px 5px grey"}}
+                                style={{borderRadius: "0px 0px 50px 50px", boxShadow: "5px 5px 5px red"}}
                                 alt="second slide"
                             />
                             <Carousel.Caption>
-                                <h3 style={{fontWeight: "bold", color: "white", textShadow: "1px 1px 1px grey"}}>못타는 사람은 없습니다. <br /> 다만, 이해하지 못해서입니다.</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h3 style={{fontWeight: "bold", color: "white", textShadow: "1px 1px 1px black", marginRight:"300px", paddingBottom: "100px"}}>최신 지도법과 다양한 티칭 노하우로</h3>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
                                 src={main3}
-                                style={{borderRadius: "10%", boxShadow: "5px 5px 5px grey"}}
+                                style={{borderRadius: "0px 0px 50px 50px", boxShadow: "5px 5px 5px red"}}
                                 alt="Third slide"
                             />
                             <Carousel.Caption>
-                                <h3 style={{fontWeight: "bold", color: "white", textShadow: "1px 1px 1px grey"}}>원하시는 목표에 도달할수 있도록 <br /> 저희가 도와드리겠습니다.</h3>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                <h3 style={{fontWeight: "bold", color: "white", textShadow: "1px 1px 1px black", marginRight:"300px", paddingBottom: "100px"}}>스키를 쉽게 접근 할수 있도록 도와드립니다.</h3>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
                 </SlideContainer>
+                <Title data-aos="fade-in" data-aos-delay="400" data-aos-easing="ease-in">Learn and become the best <br /> We are here for the support</Title>
+                <Context data-aos="fade-in" data-aos-delay="600" data-aos-easing="ease-in" style={{marginLeft: "900px", marginTop: "470px", display: "flex", position:"absolute", textShadow: "1px 1px 1px black", fontWeight:"bold", flexDirection:"column"}}>
+                    <span><span style={{color:"purple", fontSize:"30px"}}>“</span><span style={{color:"#3bc9db"}}>스키의 원리에 대해 이해</span>하면 스키가 쉬워집니다.</span>
+                    못타는 사람은 없습니다. 다만, 이해하지 못해서입니다.
+                    <span>이해하고 반복하면 <span style={{color:"#3bc9db"}}>알찬연습</span></span>
+                    <span>이해하지 못하고 반복하면 <span style={{color:"#3bc9db"}}>성과없는 훈련</span>이 됩니다.<span style={{color:"purple", fontSize:"30px"}}>“</span></span>
+                </Context>
             </Main1>
             <Main2>
+                <Morebox1 data-aos="fade-right" data-aos-delay="500">
+                    <SemiTitle style={{marginLeft:"40px", marginTop: "30px"}}>Instructor</SemiTitle>
+                    <br />
+                    <Context style={{marginLeft: "40px"}}>
+                        지산리조트 최고레벨 강사진으로 구성<br />
+                        강사들에 대한 꾸준한 관리와 교육을 통해<br />
+                        파도 강사의 교육의 질과 격을 최상급으로 유지하고 있습니다.
+                    </Context>
+                    <LearnMore style={{marginLeft: "530px", marginTop:"-90px"}}>강사진 보기</LearnMore>
+                </Morebox1>
+                <Morebox2 data-aos="fade-left" data-aos-delay="700">
+                    <SemiTitle style={{marginLeft: "270px", marginTop:"30px"}}> Instruction and fees</SemiTitle>
+                    <Context style={{position:"absolute", textAlign:"right", right:"0", marginTop:"120px", marginRight: "30px"}}>
+                        자세교정, 실력향상, 자격증취득, 선수반등<br />
+                        폭넓은 범위의 스키강습 프로그램으로 <br />
+                        원하시는 목표에 도달할수 있도록 지도합니다.
+                    </Context>
+                    <LearnMore style={{position:"absolute", marginTop:"120px", marginRight: "30px"}}>강습 커리큘럼 보기</LearnMore>
+                </Morebox2>
+            </Main2>
+            <Main3>
+                <Morebox3 data-aos="fade-right" data-aos-delay="900">
+                    <SemiTitle style={{marginLeft:"40px", marginTop: "30px"}}>Reservation</SemiTitle>
+                    <Context style={{marginLeft: "40px", marginTop:"30px"}}>
+                        상세예약 방법 및 절차를 알려드립니다.<br />
+                        문의사항 또한 자세히 답변해 드리겠습니다.
+                    </Context>
+                    <LearnMore style={{marginLeft: "530px", marginTop:"-60px"}}>예약 및 문의</LearnMore>
+                </Morebox3>
+                <Morebox4 data-aos="fade-left" data-aos-delay="1100">
+                    <SemiTitle style={{marginLeft: "430px", marginTop:"30px"}}>Preparation</SemiTitle>
+                    <Context style={{position:"absolute", right:"0", marginTop:"120px", marginRight: "30px"}}>
+                        예약직후, 강습 당일 준비사항 및 <br />강습 후 안내사항입니다.
+                    </Context>
+                    <LearnMore style={{position:"absolute", marginTop:"120px"}}>준비사항 보기</LearnMore>
+                </Morebox4>
+            </Main3>
         </div>
     );
 };

@@ -7,22 +7,25 @@ import Home from './Home';
 import About from './About';
 import Profiles from './Profiles';
 import HistorySample from './HistorySample';
-import styled from "styled-components";
-import {shadow} from "./lib/styleUtils";
 import Main from "./components/Main";
 import oc from 'open-color';
 import { createGlobalStyle } from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Page = createGlobalStyle`
     body {
-        background: linear-gradient(to right, ${oc.grape[7]}, ${oc.violet[7]}, ${oc.indigo[3]}, ${oc.cyan[4]});
+        background: ${oc.gray[1]};
     }
 `;
 
 function App() {
   return (
     <>
+     created () {
+        AOS.init()
+     },
       <Page />
       <div>
           <Main />

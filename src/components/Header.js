@@ -62,6 +62,7 @@ const Menu = styled.div`
     font-weight: 900;
     letter-spacing: 1px;
     Text-shadow: 1px 1px 1px grey;
+    text-decoration: underline;
 `;
 
 // 중간 여백

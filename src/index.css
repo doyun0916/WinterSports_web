@@ -18,3 +18,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: Fair Prosper;
+  src: url(./font/Fair-Prosper.eot) format('embedded-opentype'),
+  url(./font/Fair-Prosper.woff) format('woff'),
+  url(./font/Fair-Prosper.ttf) format('truetype');
+}
