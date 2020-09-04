@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from './Header';
+import Footer from './Footer';
 import Carousel from 'react-bootstrap/Carousel';
 import main1 from '../img/main1.jpg';
 import main2 from '../img/main2.jpg';
 import main3 from '../img/main3.jpg';
+import jisanlogo from '../img/jisanlogo.jpg';
+import instagram from '../img/instagram.png';
+import phone from '../img/phone.png';
+import email from '../img/email.png';
 import oc from 'open-color';
 import '../index.css';
+import logo from "../img/logo.PNG";
 
 const SlideContainer = styled.div`
     margin-left: 40px;
@@ -37,7 +43,7 @@ const Main1 = styled.div`
 `;
 
 const Main2 = styled.div`
-    margin-top: 400px;
+    margin-top: 550px;
     width: 1400px;
     height: 100px;
     display: flex;
@@ -136,6 +142,61 @@ const LearnMore = styled.div`
     border-radius: 5%;
 `;
 
+const Main4 = styled.div`
+    margin-top: 500px;
+    width: 100%
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background: transparent;
+    font-family: "Arial Rounded MT Bold";
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1.8rem;
+`;
+
+const Main5 = styled.div`
+    margin-top: 50px;
+    width: 100%
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background: transparent;
+    margin-bottom: 330px;
+`;
+
+const InfoContainer = styled.div`
+    margin-top: 25px;
+    margin-left: 200px;
+    width: 350px;,
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    font-family: "Arial Rounded MT Bold";
+    color: black;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1.2rem;
+    line-height: 50px;
+`;
+
+const Bar = styled.div`
+    background: black;
+    margin-left: 120px;
+    width: 5px;
+    height: 100px;    
+`;
+
+
 const Main = () => {
     return (
         <div style={{display: "flex", flexDirection: "column"}}>
@@ -187,7 +248,7 @@ const Main = () => {
                 </Context>
             </Main1>
             <Main2>
-                <Morebox1 data-aos="fade-right" data-aos-delay="500">
+                <Morebox1 data-aos="fade-right" data-aos-delay="200">
                     <SemiTitle style={{marginLeft:"40px", marginTop: "30px"}}>Instructor</SemiTitle>
                     <br />
                     <Context style={{marginLeft: "40px"}}>
@@ -197,7 +258,7 @@ const Main = () => {
                     </Context>
                     <LearnMore style={{marginLeft: "530px", marginTop:"-90px"}}>강사진 보기</LearnMore>
                 </Morebox1>
-                <Morebox2 data-aos="fade-left" data-aos-delay="700">
+                <Morebox2 data-aos="fade-left" data-aos-delay="300">
                     <SemiTitle style={{marginLeft: "270px", marginTop:"30px"}}> Instruction and fees</SemiTitle>
                     <Context style={{position:"absolute", textAlign:"right", right:"0", marginTop:"120px", marginRight: "30px"}}>
                         자세교정, 실력향상, 자격증취득, 선수반등<br />
@@ -208,7 +269,7 @@ const Main = () => {
                 </Morebox2>
             </Main2>
             <Main3>
-                <Morebox3 data-aos="fade-right" data-aos-delay="900">
+                <Morebox3 data-aos="fade-right" data-aos-delay="400">
                     <SemiTitle style={{marginLeft:"40px", marginTop: "30px"}}>Reservation</SemiTitle>
                     <Context style={{marginLeft: "40px", marginTop:"30px"}}>
                         상세예약 방법 및 절차를 알려드립니다.<br />
@@ -216,7 +277,7 @@ const Main = () => {
                     </Context>
                     <LearnMore style={{marginLeft: "530px", marginTop:"-60px"}}>예약 및 문의</LearnMore>
                 </Morebox3>
-                <Morebox4 data-aos="fade-left" data-aos-delay="1100">
+                <Morebox4 data-aos="fade-left" data-aos-delay="500">
                     <SemiTitle style={{marginLeft: "430px", marginTop:"30px"}}>Preparation</SemiTitle>
                     <Context style={{position:"absolute", right:"0", marginTop:"120px", marginRight: "30px"}}>
                         예약직후, 강습 당일 준비사항 및 <br />강습 후 안내사항입니다.
@@ -224,6 +285,27 @@ const Main = () => {
                     <LearnMore style={{position:"absolute", marginTop:"120px"}}>준비사항 보기</LearnMore>
                 </Morebox4>
             </Main3>
+            <Main4 data-aos="fade-up" data-aos-delay="200">
+                <p style={{ marginLeft:"280px"}}>Partnership</p>
+                <Bar/>
+                <p style={{ marginLeft:"140px", marginRight:"50px"}}>Contact</p>
+                <Bar/>
+                <p style={{ marginLeft:"150px"}}>Location</p>
+            </Main4>
+            <Main5  data-aos="fade-up" data-aos-delay="400">
+                <InfoContainer style={{marginLeft:"250px"}}>
+                    <img style={{boxShadow: "1px 1px 1px grey"}} src={jisanlogo} alt="jisanlogo" />
+                </InfoContainer>
+                <InfoContainer style={{marginRight:"40px"}}>
+                    <p><img style={{boxShadow: "1px 1px 1px grey", width: "20%", height:"auto", borderRadius:"25%"}} src={instagram} alt="instagram" />&nbsp;&nbsp;sports_wave1</p>
+                    <p><img style={{boxShadow: "1px 1px 1px grey", width: "20%", height:"auto", borderRadius:"50%"}} src={phone} alt="phone" />&nbsp;&nbsp;Phone: ""</p>
+                    <p><img style={{boxShadow: "1px 1px 1px grey", width: "20%", height:"auto", borderRadius:"50%"}} src={email} alt="email" />&nbsp;&nbsp;Email: ""</p>
+                </InfoContainer>
+                <InfoContainer style={{marginRight:"180px"}}>
+                    <p>Location: ""</p>
+                </InfoContainer>
+            </Main5>
+            <Footer/>
         </div>
     );
 };
